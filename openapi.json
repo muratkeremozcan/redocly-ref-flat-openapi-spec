@@ -25,7 +25,8 @@
                 }
               }
             }
-          },
+          }
+        },
         "security": [
           {
             "apiKeyAuth": []
