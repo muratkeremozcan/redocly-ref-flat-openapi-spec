@@ -1,5 +1,7 @@
-import { retryableBefore } from '../support/retryable-before'
 import spok from 'cy-spok'
+import 'cypress-ajv-schema-validator'
+import jsonSchema from '../../openapi.json'
+import { retryableBefore } from '../support/retryable-before'
 
 describe('CRUD movie', () => {
   retryableBefore(() => {
@@ -28,6 +30,10 @@ describe('CRUD movie', () => {
       method: 'GET',
       url: '/users'
     })
+      .validateSchema(jsonSchema, {
+        endpoint: '/users',
+        method: 'GET'
+      })
       .its('body.users')
       .each(spok(userShape))
 
@@ -35,6 +41,10 @@ describe('CRUD movie', () => {
       method: 'GET',
       url: '/users/1'
     })
+      .validateSchema(jsonSchema, {
+        endpoint: '/users/{id}',
+        method: 'GET'
+      })
       .its('body')
       .should(spok(userShape))
   })
