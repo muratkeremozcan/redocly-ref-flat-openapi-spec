@@ -1,4 +1,5 @@
 import { retryableBefore } from '../support/retryable-before'
+import spok from 'cy-spok'
 
 describe('CRUD movie', () => {
   retryableBefore(() => {
@@ -10,7 +11,31 @@ describe('CRUD movie', () => {
       .should('eq', 'Server is running')
   })
 
-  it('should', () => {
-    cy.log('say hello')
+  const userShape = {
+    id: spok.string,
+    name: spok.string,
+    email: spok.string,
+    address: {
+      street: spok.string,
+      city: spok.string,
+      state: spok.string,
+      zip: spok.string
+    }
+  }
+
+  it('should get all users and a single user', () => {
+    cy.api({
+      method: 'GET',
+      url: '/users'
+    })
+      .its('body.users')
+      .each(spok(userShape))
+
+    cy.api({
+      method: 'GET',
+      url: '/users/1'
+    })
+      .its('body')
+      .should(spok(userShape))
   })
 })

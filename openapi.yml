@@ -1,0 +1,47 @@
+openapi: "3.1.0"
+info:
+  title: "Sample API"
+  description: "A demonstration API with nested references."
+  version: "1.0.0"
+servers: 
+  - url: "http://localhost:3000"
+
+paths:
+  /users:
+    get:
+      operationId: "getAllUsers"
+      summary: "Get all users"
+      responses:
+        '200':
+          description: "A list of users"
+          content:
+            application/json:
+              schema:
+                $ref: "./components/schemas/UserList.yml"
+      security:
+        - apiKeyAuth: [] # Example security definition
+  /users/{userId}:
+    get:
+      operationId: "getUserById"
+      summary: "Get user by ID"
+      parameters:
+        - $ref: "./components/parameters/UserId.yml"
+      responses:
+        '200':
+          description: "User details"
+          content:
+            application/json:
+              schema:
+                $ref: "./components/schemas/User.yml"
+      security:
+        - apiKeyAuth: [] # Example security definition
+
+components:
+  schemas:
+    ErrorResponse:
+      $ref: "./components/schemas/Error.yml"
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization

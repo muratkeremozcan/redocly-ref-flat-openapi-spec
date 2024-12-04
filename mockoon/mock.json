@@ -1,7 +1,7 @@
 {
-  "uuid": "17f0c9ff-89f9-4682-a07b-47f4efece198",
-  "lastMigration": 32,
-  "name": "provider-mock",
+  "uuid": "8603e945-2372-44c0-8fd9-c9a4c45eee16",
+  "lastMigration": 33,
+  "name": "redocly",
   "endpointPrefix": "",
   "latency": 0,
   "port": 3001,
@@ -9,14 +9,14 @@
   "folders": [],
   "routes": [
     {
-      "uuid": "61df68a0-2169-48dc-80c4-1042b971438d",
+      "uuid": "d5b4c0ec-9d51-4218-9d9d-7a7bff448e7e",
       "type": "http",
       "documentation": "",
       "method": "post",
       "endpoint": "__messages__",
       "responses": [
         {
-          "uuid": "612a5ee1-2f28-4c20-9f6f-9b856cf38deb",
+          "uuid": "fdae9465-3a85-402b-94ba-258a3f564585",
           "body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot POST /__messages__</pre>\n</body>\n</html>\n",
           "latency": 0,
           "statusCode": 404,
@@ -80,17 +80,19 @@
           "callbacks": []
         }
       ],
-      "responseMode": null
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     },
     {
-      "uuid": "95a7a19a-167e-4b44-9389-30e11ccc554e",
+      "uuid": "08315d82-d3dc-4679-aa93-fce30e422c81",
       "type": "http",
       "documentation": "",
       "method": "get",
       "endpoint": "",
       "responses": [
         {
-          "uuid": "8820d01a-565e-4c36-a8e6-15d0d043c422",
+          "uuid": "88ca69be-72b1-4adf-8d68-d900d7d1c17a",
           "body": "{\n  \"message\": \"Server is running\"\n}",
           "latency": 0,
           "statusCode": 200,
@@ -150,17 +152,19 @@
           "callbacks": []
         }
       ],
-      "responseMode": null
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     },
     {
-      "uuid": "e6c27c44-7a74-4e02-84ef-5b4bc5c87e81",
+      "uuid": "30e03b8d-40de-4e1e-a457-7bf495daa70f",
       "type": "http",
       "documentation": "",
       "method": "get",
       "endpoint": "__messages__",
       "responses": [
         {
-          "uuid": "4c703015-8446-43a7-a1f1-872966e71ebd",
+          "uuid": "5af63858-d613-487b-a754-0b24a0c386ac",
           "body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /__messages__</pre>\n</body>\n</html>\n",
           "latency": 0,
           "statusCode": 404,
@@ -224,148 +228,20 @@
           "callbacks": []
         }
       ],
-      "responseMode": null
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     },
     {
-      "uuid": "f076e69f-22a3-4b73-9798-d38404c97f2c",
-      "type": "http",
-      "documentation": "",
-      "method": "post",
-      "endpoint": "movies",
-      "responses": [
-        {
-          "uuid": "9761b7db-e860-4e9e-b99e-4562c1ca4fc8",
-          "body": "{\n  \"status\": 200,\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"tabella cupressus demitto\",\n    \"year\": 1985,\n    \"rating\": 7.5\n  }\n}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [
-            {
-              "key": "access-control-allow-headers",
-              "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
-            },
-            {
-              "key": "access-control-allow-methods",
-              "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
-            },
-            {
-              "key": "access-control-allow-origin",
-              "value": "http://localhost:3000"
-            },
-            {
-              "key": "connection",
-              "value": "close"
-            },
-            {
-              "key": "content-type",
-              "value": "application/json; charset=utf-8"
-            },
-            {
-              "key": "date",
-              "value": "Fri, 04 Oct 2024 17:37:28 GMT"
-            },
-            {
-              "key": "etag",
-              "value": "W/\"4d-wMO8rvSG4zdycT2DGCjEHn4tXrQ\""
-            },
-            {
-              "key": "vary",
-              "value": "Origin"
-            },
-            {
-              "key": "x-powered-by",
-              "value": "Express"
-            },
-            {
-              "key": "content-length",
-              "value": "107"
-            }
-          ],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
-          "crudKey": "id",
-          "callbacks": []
-        }
-      ],
-      "responseMode": null
-    },
-    {
-      "uuid": "c5380a71-b614-4565-817a-c4f394cd26ff",
+      "uuid": "e500ddc2-b94a-43e9-b639-7e7b9b4e906b",
       "type": "http",
       "documentation": "",
       "method": "get",
-      "endpoint": "movies",
+      "endpoint": "users",
       "responses": [
         {
-          "uuid": "2547396b-ba7a-4a77-9344-d0539e20bfdb",
-          "body": "{\n  \"status\": 200,\n  \"data\": [\n    {\n      \"id\": 1,\n      \"name\": \"tabella cupressus demitto\",\n      \"year\": 1985,\n      \"rating\": 7.5\n    }\n  ]\n}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [
-            {
-              "key": "access-control-allow-headers",
-              "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
-            },
-            {
-              "key": "access-control-allow-methods",
-              "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
-            },
-            {
-              "key": "access-control-allow-origin",
-              "value": "http://localhost:3000"
-            },
-            {
-              "key": "connection",
-              "value": "close"
-            },
-            {
-              "key": "content-type",
-              "value": "application/json; charset=utf-8"
-            },
-            {
-              "key": "date",
-              "value": "Fri, 04 Oct 2024 17:37:29 GMT"
-            },
-            {
-              "key": "etag",
-              "value": "W/\"4f-SBXhLaYTuG0IWhhviMFJMjt96UA\""
-            },
-            {
-              "key": "vary",
-              "value": "Origin"
-            },
-            {
-              "key": "x-powered-by",
-              "value": "Express"
-            },
-            {
-              "key": "content-length",
-              "value": "125"
-            }
-          ],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
-          "crudKey": "id",
-          "callbacks": []
-        },
-        {
-          "uuid": "38f35f4b-8dae-42e0-9975-bec2823df3a4",
-          "body": "{\n  \"status\": 200,\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"tabella cupressus demitto\",\n    \"year\": 1985,\n    \"rating\": 7.5\n  }\n}",
+          "uuid": "421ece37-c9d7-4f54-8a6b-f846c39627b4",
+          "body": "{\n  \"users\": [\n    {\n      \"id\": \"1\",\n      \"name\": \"Alice Johnson\",\n      \"email\": \"alice.johnson@example.com\",\n      \"address\": {\n        \"street\": \"123 Main St\",\n        \"city\": \"Wonderland\",\n        \"state\": \"CA\",\n        \"zip\": \"90001\"\n      }\n    },\n    {\n      \"id\": \"2\",\n      \"name\": \"Bob Smith\",\n      \"email\": \"bob.smith@example.com\",\n      \"address\": {\n        \"street\": \"456 Elm St\",\n        \"city\": \"Springfield\",\n        \"state\": \"IL\",\n        \"zip\": \"62704\"\n      }\n    }\n  ]\n}\n",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -374,80 +250,33 @@
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "query",
-              "modifier": "name",
-              "value": "",
-              "invert": true,
-              "operator": "null"
-            }
-          ],
+          "rules": [],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": false,
+          "default": true,
           "crudKey": "id",
           "callbacks": []
         }
       ],
-      "responseMode": null
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     },
     {
-      "uuid": "cc4905c4-5029-4a00-8cc5-6cc8c9f98190",
+      "uuid": "1fa9ef7d-ae74-4417-a738-4f2c497352bd",
       "type": "http",
       "documentation": "",
       "method": "get",
-      "endpoint": "movies/1",
+      "endpoint": "users/1",
       "responses": [
         {
-          "uuid": "87ad459d-4144-4e5a-bea4-2f62c5661eae",
-          "body": "{\n  \"status\": 200,\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"tabella cupressus demitto\",\n    \"year\": 1985,\n    \"rating\": 7.5\n  }\n}",
+          "uuid": "4822df6e-36e5-43a7-a898-6f23bb49eb6f",
+          "body": "{\n  \"id\": \"1\",\n  \"name\": \"Alice Johnson\",\n  \"email\": \"alice.johnson@example.com\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Wonderland\",\n    \"state\": \"CA\",\n    \"zip\": \"90001\"\n  }\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "access-control-allow-headers",
-              "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
-            },
-            {
-              "key": "access-control-allow-methods",
-              "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
-            },
-            {
-              "key": "access-control-allow-origin",
-              "value": "http://localhost:3000"
-            },
-            {
-              "key": "connection",
-              "value": "close"
-            },
-            {
-              "key": "content-type",
-              "value": "application/json; charset=utf-8"
-            },
-            {
-              "key": "date",
-              "value": "Fri, 04 Oct 2024 17:37:29 GMT"
-            },
-            {
-              "key": "etag",
-              "value": "W/\"4d-wMO8rvSG4zdycT2DGCjEHn4tXrQ\""
-            },
-            {
-              "key": "vary",
-              "value": "Origin"
-            },
-            {
-              "key": "x-powered-by",
-              "value": "Express"
-            },
-            {
-              "key": "content-length",
-              "value": "107"
-            }
-          ],
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -456,186 +285,36 @@
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": false,
+          "default": true,
           "crudKey": "id",
           "callbacks": []
         }
       ],
-      "responseMode": null
-    },
-    {
-      "uuid": "280bf17c-bfb7-44d3-b8ea-6ae59898dfc7",
-      "type": "http",
-      "documentation": "",
-      "method": "put",
-      "endpoint": "movies/1",
-      "responses": [
-        {
-          "uuid": "65729f6d-ab7c-4f86-88a5-63345e52511d",
-          "body": "{\n  \"status\": 200,\n  \"data\": {\n    \"id\": 1,\n    \"name\": \"Updated Name\",\n    \"year\": 2000,\n    \"rating\": 7.5\n  }\n}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [
-            {
-              "key": "access-control-allow-headers",
-              "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
-            },
-            {
-              "key": "access-control-allow-methods",
-              "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
-            },
-            {
-              "key": "access-control-allow-origin",
-              "value": "http://localhost:3000"
-            },
-            {
-              "key": "connection",
-              "value": "close"
-            },
-            {
-              "key": "content-type",
-              "value": "application/json; charset=utf-8"
-            },
-            {
-              "key": "date",
-              "value": "Fri, 04 Oct 2024 17:37:29 GMT"
-            },
-            {
-              "key": "etag",
-              "value": "W/\"40-5NiXOKqCdtC/yP+lpVxnV6TA31s\""
-            },
-            {
-              "key": "vary",
-              "value": "Origin"
-            },
-            {
-              "key": "x-powered-by",
-              "value": "Express"
-            },
-            {
-              "key": "content-length",
-              "value": "94"
-            }
-          ],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
-          "crudKey": "id",
-          "callbacks": []
-        }
-      ],
-      "responseMode": null
-    },
-    {
-      "uuid": "67ba0d87-21ba-452b-a91d-eb2a328b028e",
-      "type": "http",
-      "documentation": "",
-      "method": "delete",
-      "endpoint": "movies/1",
-      "responses": [
-        {
-          "uuid": "fd457393-38ad-4950-9dd8-9c3f00a1328d",
-          "body": "{\n  \"status\": 200,\n  \"message\": \"Movie 1 has been deleted\"\n}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [
-            {
-              "key": "access-control-allow-headers",
-              "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
-            },
-            {
-              "key": "access-control-allow-methods",
-              "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
-            },
-            {
-              "key": "access-control-allow-origin",
-              "value": "http://localhost:3000"
-            },
-            {
-              "key": "connection",
-              "value": "close"
-            },
-            {
-              "key": "content-type",
-              "value": "application/json; charset=utf-8"
-            },
-            {
-              "key": "date",
-              "value": "Fri, 04 Oct 2024 17:37:29 GMT"
-            },
-            {
-              "key": "etag",
-              "value": "W/\"33-eNU6TdGHHsflo/gTHPlveah4YyQ\""
-            },
-            {
-              "key": "vary",
-              "value": "Origin"
-            },
-            {
-              "key": "x-powered-by",
-              "value": "Express"
-            },
-            {
-              "key": "content-length",
-              "value": "60"
-            }
-          ],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
-          "crudKey": "id",
-          "callbacks": []
-        }
-      ],
-      "responseMode": null
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     }
   ],
   "rootChildren": [
     {
       "type": "route",
-      "uuid": "61df68a0-2169-48dc-80c4-1042b971438d"
+      "uuid": "d5b4c0ec-9d51-4218-9d9d-7a7bff448e7e"
     },
     {
       "type": "route",
-      "uuid": "95a7a19a-167e-4b44-9389-30e11ccc554e"
+      "uuid": "08315d82-d3dc-4679-aa93-fce30e422c81"
     },
     {
       "type": "route",
-      "uuid": "e6c27c44-7a74-4e02-84ef-5b4bc5c87e81"
+      "uuid": "30e03b8d-40de-4e1e-a457-7bf495daa70f"
     },
     {
       "type": "route",
-      "uuid": "f076e69f-22a3-4b73-9798-d38404c97f2c"
+      "uuid": "e500ddc2-b94a-43e9-b639-7e7b9b4e906b"
     },
     {
       "type": "route",
-      "uuid": "c5380a71-b614-4565-817a-c4f394cd26ff"
-    },
-    {
-      "type": "route",
-      "uuid": "cc4905c4-5029-4a00-8cc5-6cc8c9f98190"
-    },
-    {
-      "type": "route",
-      "uuid": "280bf17c-bfb7-44d3-b8ea-6ae59898dfc7"
-    },
-    {
-      "type": "route",
-      "uuid": "67ba0d87-21ba-452b-a91d-eb2a328b028e"
+      "uuid": "1fa9ef7d-ae74-4417-a738-4f2c497352bd"
     }
   ],
   "proxyMode": false,
