@@ -241,7 +241,7 @@
       "responses": [
         {
           "uuid": "421ece37-c9d7-4f54-8a6b-f846c39627b4",
-          "body": "{\n  \"users\": [\n    {\n      \"id\": \"1\",\n      \"name\": \"Alice Johnson\",\n      \"email\": \"alice.johnson@example.com\",\n      \"address\": {\n        \"street\": \"123 Main St\",\n        \"city\": \"Wonderland\",\n        \"state\": \"CA\",\n        \"zip\": \"90001\"\n      }\n    },\n    {\n      \"id\": \"2\",\n      \"name\": \"Bob Smith\",\n      \"email\": \"bob.smith@example.com\",\n      \"address\": {\n        \"street\": \"456 Elm St\",\n        \"city\": \"Springfield\",\n        \"state\": \"IL\",\n        \"zip\": \"62704\"\n      }\n    }\n  ]\n}\n",
+          "body": "[\n  {\n    \"id\": \"1\",\n    \"name\": \"Alice Johnson\",\n    \"email\": \"alice.johnson@example.com\",\n    \"address\": {\n      \"street\": \"123 Main St\",\n      \"city\": \"Wonderland\",\n      \"state\": \"CA\",\n      \"zip\": \"90001\"\n    }\n  },\n  {\n    \"id\": \"2\",\n    \"name\": \"Bob Smith\",\n    \"email\": \"bob.smith@example.com\",\n    \"address\": {\n      \"street\": \"456 Elm St\",\n      \"city\": \"Springfield\",\n      \"state\": \"IL\",\n      \"zip\": \"62704\"\n    }\n  }\n]\n\n",
           "latency": 0,
           "statusCode": 200,
           "label": "",

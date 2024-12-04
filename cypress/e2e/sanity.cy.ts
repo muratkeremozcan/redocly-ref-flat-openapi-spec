@@ -31,11 +31,11 @@ describe('CRUD movie', () => {
       method: 'GET',
       url: '/users'
     })
-      .its('body.users')
       .validateSchema(jsonSchema, {
         endpoint: '/users',
         method: 'GET'
       })
+      .its('body')
       .each(spok(userShape))
 
     cy.api({
@@ -43,7 +43,7 @@ describe('CRUD movie', () => {
       url: '/users/1'
     })
       .validateSchema(jsonSchema, {
-        endpoint: '/users/{id}',
+        endpoint: '/users/{userId}',
         method: 'GET'
       })
       .its('body')
