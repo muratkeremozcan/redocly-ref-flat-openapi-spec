@@ -1,6 +1,6 @@
 # Cy, Node template
 
-A template with tooling, configuration and best practices for a Cy api e2e testing in a Node.js project.
+A demo of `redocly cli` flattening the nested OpenAPI spec.
 
 ## Setup
 
@@ -8,15 +8,12 @@ A template with tooling, configuration and best practices for a Cy api e2e testi
 npm i
 ```
 
-Use the sample `.env.example` file to create a `.env` file of your own. These values will also have to exist in your CI secrets.
-
-```bash
-SERVERPORT=3001
-```
-
 ### Scripts
 
 ```bash
+# bundles the openapi spec, optionally updates the version (pass it in as a 3rd argument in package.json script)
+npm run bundle:openapi
+
 npm run lint
 npm run typecheck
 npm run fix:format

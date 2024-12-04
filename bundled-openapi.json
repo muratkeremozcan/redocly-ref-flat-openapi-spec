@@ -3,7 +3,7 @@
   "info": {
     "title": "Sample API",
     "description": "A demonstration API with nested references.",
-    "version": "1.0.1"
+    "version": "1.0.0"
   },
   "servers": [
     {
