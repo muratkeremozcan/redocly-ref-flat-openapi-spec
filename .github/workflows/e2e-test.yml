@@ -1,0 +1,41 @@
+name: Run e2e tests
+on:
+  pull_request:
+  workflow_dispatch:
+
+# if this branch is pushed back to back, cancel the older branch's workflow
+concurrency:
+  group: ${{ github.ref }} && ${{ github.workflow }}
+  cancel-in-progress: true
+
+env:
+  SERVERPORT: 3001
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # Enable for for cy cloud
+  # CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+
+jobs:
+  e2e-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Read Node version from .nvmrc
+        id: node_version
+        run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_ENV
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Cypress e2e tests 🧪
+        uses: cypress-io/github-action@v6.7.7
+        with:
+          start: npm run mock:server
+          config-file: cypress/config/local.config.ts
+          # Enable for for cy cloud
+          # record: true
+          # group: local
+          # tag: local
