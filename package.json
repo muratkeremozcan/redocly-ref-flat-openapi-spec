@@ -15,7 +15,8 @@
     "test": "jest --detectOpenHandles --verbose --silent --config jest.config.ts",
     "test:watch": "jest --watch --config jest.config.ts",
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.jest.json",
-    "lint": "eslint --ext=.js,.ts,.tsx --fix"
+    "lint": "eslint --ext=.js,.ts,.tsx --fix",
+    "bundle:openapi": "tsx scripts/bundle-openapi.ts openapi.json bundled-openapi.json 1.0.1"
   },
   "devDependencies": {
     "@bahmutov/cy-api": "2.2.6",
@@ -25,6 +26,7 @@
     "@esbuild-plugins/node-modules-polyfill": "0.2.2",
     "@faker-js/faker": "8.4.1",
     "@mockoon/cli": "9.0.0",
+    "@redocly/cli": "^1.25.15",
     "@types/jest": "29.5.14",
     "@types/lodash": "4.17.13",
     "@types/node": "22.10.1",

@@ -1,6 +1,7 @@
 import spok from 'cy-spok'
 import 'cypress-ajv-schema-validator'
-import jsonSchema from '../../openapi.json'
+// import jsonSchema from '../../openapi.json' // normal
+import jsonSchema from '../../bundled-openapi.json' // bundled
 import { retryableBefore } from '../support/retryable-before'
 
 describe('CRUD movie', () => {
@@ -34,7 +35,7 @@ describe('CRUD movie', () => {
         endpoint: '/users',
         method: 'GET'
       })
-      .its('body.users')
+      .its('body')
       .each(spok(userShape))
 
     cy.api({
@@ -42,7 +43,7 @@ describe('CRUD movie', () => {
       url: '/users/1'
     })
       .validateSchema(jsonSchema, {
-        endpoint: '/users/{id}',
+        endpoint: '/users/{userId}',
         method: 'GET'
       })
       .its('body')
