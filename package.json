@@ -17,7 +17,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.jest.json",
     "lint": "eslint --ext=.js,.ts,.tsx --fix",
     "bundle:openapi": "tsx scripts/bundle-openapi.ts openapi.json bundled-openapi.json",
-    "generate:api-docs": "npx redocly build-docs bundled-openapi.json -o docs/api-docs.html"
+    "generate:api-docs": "rm -rf docs && npx redocly build-docs bundled-openapi.json -o docs/api-docs.html"
   },
   "devDependencies": {
     "@bahmutov/cy-api": "2.2.6",
