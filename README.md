@@ -1,6 +1,6 @@
 # Cy, Node template
 
-[![API Documentation](https://img.shields.io/badge/API-DOCUMENTATION-blue?style=flat-square)](https://muratkeremozcan.github.io/redocly-ref-flat-openapi/gh-pages/api-docs.html)
+[![API Documentation](https://img.shields.io/badge/API-DOCUMENTATION-blue?style=flat-square)](https://muratkeremozcan.github.io/redocly-ref-flat-openapi-spec/api-docs.html)
 
 A demo of `redocly cli` flattening the nested OpenAPI spec.
 
