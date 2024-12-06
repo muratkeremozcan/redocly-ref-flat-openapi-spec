@@ -1,4 +1,4 @@
-# Cy, Node template
+# Sample repo to show `redocly cli` flattening the nested OpenAPI spec and free OpenAPI docs on GitHub Pages
 
 [![API Documentation](https://img.shields.io/badge/API-DOCUMENTATION-blue?style=flat-square)](https://muratkeremozcan.github.io/redocly-ref-flat-openapi-spec/api-docs.html)
 
