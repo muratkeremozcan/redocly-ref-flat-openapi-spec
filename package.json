@@ -16,7 +16,8 @@
     "test:watch": "jest --watch --config jest.config.ts",
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.jest.json",
     "lint": "eslint --ext=.js,.ts,.tsx --fix",
-    "bundle:openapi": "tsx scripts/bundle-openapi.ts openapi.json bundled-openapi.json"
+    "bundle:openapi": "tsx scripts/bundle-openapi.ts openapi.json bundled-openapi.json",
+    "generate:api-docs": "npx redocly build-docs bundled-openapi.json -o gh-pages/api-docs.html"
   },
   "devDependencies": {
     "@bahmutov/cy-api": "2.2.6",
@@ -34,7 +35,7 @@
     "@typescript-eslint/parser": "8.17.0",
     "cy-spok": "1.6.2",
     "cypress": "13.16.0",
-    "cypress-ajv-schema-validator": "^1.3.0",
+    "cypress-ajv-schema-validator": "^1.4.0",
     "cypress-data-session": "2.8.5",
     "cypress-map": "1.43.0",
     "cypress-recurse": "^1.35.3",
