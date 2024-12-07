@@ -45,7 +45,7 @@ jobs:
       - name: Generate api docs for Github Pages (html)
         run: npm run generate:api-docs
 
-      - name: Check if OpenAPI docs for Github Pages have changed
+      - name: Check if OpenAPI docs for Github Pages have changed (html)
         id: check_changes
         run: |
           if git diff --quiet docs/api-docs.html; then
