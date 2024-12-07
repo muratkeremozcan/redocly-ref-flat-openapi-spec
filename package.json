@@ -16,8 +16,10 @@
     "test:watch": "jest --watch --config jest.config.ts",
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.jest.json",
     "lint": "eslint --ext=.js,.ts,.tsx --fix",
+    "generate:api-docs": "rm -rf docs && npx redocly build-docs bundled-openapi.json -o docs/api-docs.html",
+    "optic:lint": "optic lint openapi.json",
     "bundle:openapi": "tsx scripts/bundle-openapi.ts openapi.json bundled-openapi.json",
-    "generate:api-docs": "rm -rf docs && npx redocly build-docs bundled-openapi.json -o docs/api-docs.html"
+    "optic:diff": "optic diff bundled-openapi.json --check --web --base main"
   },
   "devDependencies": {
     "@bahmutov/cy-api": "2.2.6",
@@ -33,6 +35,7 @@
     "@types/node": "22.10.1",
     "@typescript-eslint/eslint-plugin": "8.17.0",
     "@typescript-eslint/parser": "8.17.0",
+    "@useoptic/optic": "^1.0.4",
     "cy-spok": "1.6.2",
     "cypress": "13.16.0",
     "cypress-ajv-schema-validator": "^1.4.0",
