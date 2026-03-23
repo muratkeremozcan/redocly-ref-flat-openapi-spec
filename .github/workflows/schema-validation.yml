@@ -56,7 +56,7 @@ jobs:
 
       - name: Commit and push api doc changes for Github Pages
         if: env.changes == 'true'
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@v10
         with:
           author_name: 'GitHub Actions'
           author_email: 'actions@github.com'
